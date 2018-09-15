@@ -17,19 +17,19 @@ client = Bot(command_prefix=BOT_PREFIX)
                 pass_context=True)
 async def eight_ball(context):
     possible_responses = [
-        'That is a resounding no',
-        'It is not looking likely',
-        'Too hard to tell',
-        'It is quite possible',
-        'Definitely',
+        'Определённо нет',
+        'Наверное нет',
+        'Сложно сказать',
+        'Возможно',
+        'Определённо да',
     ]
     await client.say(random.choice(possible_responses) + ", " + context.message.author.mention)
 
 
 @client.command()
-async def square(number):
+async def квадрат(number):
     squared_value = int(number) * int(number)
-    await client.say(str(number) + " squared is " + str(squared_value))
+    await client.say(str(number) + " в квадрате " + str(squared_value))
 
 
 @client.command()
