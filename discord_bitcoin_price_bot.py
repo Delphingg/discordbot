@@ -10,6 +10,12 @@ TOKEN = "NDg1NTAzMzQ5NTE3NzEzNDE4.Dn6Fjg.OnCymgrFXIFAvOLMJKQBPfNCDzY"  # Get at 
 
 client = Bot(command_prefix=BOT_PREFIX)
 
+@client.event
+
+async def on_message(message):
+  if  message.content.upper().startswith('КОТ'):
+        await client.send_message(message.channel, "https://media.giphy.com/media/JIX9t2j0ZTN9S/giphy.gif")
+
 @client.command(name='8ball',
                 description="Answers a yes/no question.",
                 brief="Answers from the beyond.",
