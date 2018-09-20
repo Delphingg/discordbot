@@ -4,34 +4,20 @@ import aiohttp
 import json
 from discord import Game
 from discord.ext.commands import Bot
-
+BOT_PREFIX = ("?", "!")
 TOKEN = "NDg1NTAzMzQ5NTE3NzEzNDE4.Dn6Fjg.OnCymgrFXIFAvOLMJKQBPfNCDzY"  # Get at discordapp.com/developers/applications/me
 
 client = Bot(command_prefix=BOT_PREFIX)
 
 
 
-@client.command(name='8ball',
-                description="Answers a yes/no question.",
-                brief="Answers from the beyond.",
-                aliases=['eight_ball', 'eightball', '8-ball'],
-                pass_context=True)
-async def eight_ball(context):
-    possible_responses = [
-        'Дарова нахуй',
-        'Привет пидоргон',
-        'Пшол в пизду',
-        'Хуй говно пизда залупа',
-        'qq',
-    ]
-    await client.say(random.choice(possible_responses) + ", " + context.message.author.mention)
 
   @client.command(name='qq',
                 description="Answers a yes/no question.",
                 brief="Answers from the beyond.",
                 aliases=['QQ', 'Здарова мыши', 'ЗДАРОВА МЫШИ', 'Привет', 'ПРИВЕТ'],
                 pass_context=True)
-async def eight_ball(context):
+async def eight_ball:
     possible_responses = [
         'Определённо нет',
         'Наверное нет',
